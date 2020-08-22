@@ -34,7 +34,6 @@ const CartProvider: React.FC = ({ children }) => {
         const storageProducts = await AsyncStorage.getItem(
           '@GoMarketplace:products',
         );
-        console.log('storageProducts :>> ', storageProducts);
         if (storageProducts) setProducts(JSON.parse(storageProducts));
       } catch (err) {
         console.error(err);
